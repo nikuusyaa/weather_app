@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script src="https://kit.fontawesome.com/fc155fac88.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+     
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body background="sky3.png">
+    <br />
+    <span class="all">
+    <div class="container">
+       
+      <div class="row">
+         <span class="main" >
+
+          <form>
+             
+                <span class="change_city_button" id="button_city">
+          
+            <input   autocomplete="off" autofocus="on" type="text" id="mainCity"/>
+            <br />
+            <button class="change"> 
+              Change city
+            </button>
+              </span> 
+          </form>
+        </div>
+         </div>
+   <h1 id="kh">
+KHARKIV
+   </h1>
+   <h5>
+     <span id="weekDay">MONDAY</span> | <span id="months">MAY</span> <span id="number">8</span>  | <span id="time1">02:03</span>
+   </h5>
+   <span class="fifthline">
+<div class="container">
+  <div class="row">
+ <div class="col-4">
+ <span class="precip">
+   <div class="col-6">
+<i class="fa-solid fa-cloud-rain" class="rain"></i>
+   </div>
+     <div class="col-6" id="humidity">
+     20%
+   </div>
+ </span>
+ </div>
+   <div class="col-4">
+     <span class="current_degree">
+      <span id="ttemp">
+     18   
+      </span>
+     
+     <span class="current_degree1">
+     <button id="celsius" class="degreebutton" >℃</button>
+     |
+     <button  id ="fahrenheit" class="degreebutton" >°F</button>
+     </span>
+     </span>
+   </div>
+   <div class="col-4">
+     <span class="precip">
+   <div class="col-6">
+<i class="fa-solid fa-wind"></i>
+   </div>
+     <div class="col-6" id="wind">
+     2 m/h 
+   </div>
+ </span>
+   </div>
+  </div>
+</div>
+ </div>
+   </span>
+ 
+       <span class="degree">
+     <div class="container">
+       <div class="row">
+      <div class="col">
+       <span class="time_1">  
+         +10℃ 
+            </span>
+      </div>
+    
+     <div class="col">
+       <span class="time_2">
+      +15℃ 
+       </span>
+      </div>
+          <div class="col">
+            <span class="time_3">
+      +17℃ 
+            </span>
+
+      </div>
+          <div class="col">
+            <span class="time_4">
+      +18℃ 
+            </span>
+      </div>
+          <div class="col">
+            <span class="time_5">
+      +14℃ 
+            </span>
+          </div>  
+           </div>
+         </div>
+          </span>
+          <br />
+          <span class="generalTime">
+     <span class="timezone">
+     <div class="container">
+       <div class="row">
+        
+  
+      <div class="col">
+        
+       <span class="time_6">  
+         24:00
+            </span>
+      </div>
+    
+     <div class="col">
+       <span class="time_7">
+      05:00
+       </span>
+      </div>
+          <div class="col">
+            <span class="time_8">
+      10:00
+            </span>
+
+      </div>
+          <div class="col">
+            <span class="time_9">
+      15:00
+            </span>
+      </div>
+          <div class="col">
+            <span class="time_10">
+      20:00
+            </span>
+          </div>  
+        </span>
+         </div>
+          </span>
+        
+    
+
+ <br />
+   </div>
+        <img src="pixelart.png" />
+        <img src="pixelart2.png"/>
+        <img src="pixelart3.png"/>
+        <img src="pixelart4.png"/>
+        <img src="pixelart5.png"/>
+        <br />
+        <a class="link21" href="https://www.linkedin.com/in/veronika-borozenets-156952238">
+        <span class="author" >
+          CODED BY VERONICA BOROZENETS 
+         
+          </span>
+        </a>
+        <a class="link21" href="https://www.instagram.com/_nikusyaa/?hl=en">
+        <div class="author">
+          inst:@_nikusyaa
+          </div>
+        </a>
+        </span>
+  
+     
+     
+  <link rel="stylesheet" href="src/styles.css" />
+ 
+    </span>
+    <br />
+
+
+    
+
+
+
+
+    <script  >
+    
+      let now = new Date();
+    let day=document.querySelector("#weekDay");
+     let days = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSADY", "FRIDAY", "SATURDAY"];
+      let daym = days[now.getDay()];
+    day.innerHTML=daym;
+
+
+    let mon= document.querySelector("#months");
+    let monthes= [
+        "JANUARY",
+        "FEBRUARY",
+        "MARCH",
+        "APRIL",
+        "MAY",
+        "JUNE",
+        "JULY",
+        "AUGUST",
+        "SEPTEMBER",
+        "OCTOBER",
+        "NOVEMBER",
+        "DECEMBER"
+      ];
+let month = monthes[now.getMonth()];
+mon.innerHTML=month;
+let data= document.querySelector("#number");
+data.innerHTML=now.getDate();
+let timeNow= document.querySelector("#time1");
+timeNow.innerHTML= now.getHours() +":"+ now.getMinutes();
+if (now.getMinutes()<10){
+timeNow.innerHTML=now.getHours()+ ":0"+now.getMinutes();
+}
+if (now.getHours()<10){
+timeNow.innerHTML="0"+now.getHours()+":" +now.getMinutes();
+}
+if ((now.getHours()<10) && (now.getMinutes()<10))
+{
+timeNow.innerHTML="0"+ now.getHours()+":0"+ now.getMinutes();
+}
+
+
+function changeCity(event){
+  event.preventDefault();
+  let ccity=document.querySelector("#mainCity");
+   let CITY=ccity.value;
+kh.innerHTML=CITY;
+
+
+function displayWeather(response){
+let currentTemp = document.querySelector("#ttemp");
+  let temperature = Math.round(response.data.main.temp);
+  currentTemp.innerHTML=`${temperature}℃ `;
+  let currentWindSpeed=document.querySelector("#wind");
+  let wind= response.data.wind.speed;
+  currentWindSpeed.innerHTML=` ${wind} km/h `;
+  let currentHumidity= document.querySelector("#humidity");
+  let humidity=response.data.main.humidity;
+  currentHumidity.innerHTML=` ${humidity} % `
+
+}
+let key = "5f472b7acba333cd8a035ea85a0d4d4c";
+let url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${key}&units=metric`;
+axios.get(url).then(displayWeather);
+
+
+}
+
+let city= document.querySelector("form");
+city.addEventListener("submit", changeCity);
+
+
+function changeDegree(){
+  event.preventDefault();
+  ttemp.innerHTML= currentTemp;
+}
+let md=document.querySelector("#celsius");
+md.addEventListener("click", changeDegree)
+function changeDegree2(){
+  event.preventDefault();
+  ttemp.innerHTML="64°F";
+  
+}
+let md2=document.querySelector("#fahrenheit");
+md2.addEventListener("click", changeDegree2)
+
+
+
+
+
+
+    </script>
+  </body>
+  
+  
+</html>
